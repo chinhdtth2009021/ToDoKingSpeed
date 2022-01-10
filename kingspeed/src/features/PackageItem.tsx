@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { AddIcon } from '@chakra-ui/icons'
 import { ChevronRightIcon, ChevronDownIcon } from '@chakra-ui/icons'
 import { Box, Flex, Image, Button } from '@chakra-ui/react'
+import StakeDetail from "./StakeDetail";
 export default function PackageItem({ item }: any) {
+    const defaultOption = item.options.find((option: any) => option.isDefault)
 
+    const [selectOption, setSelectOption] = useState(
+        item.options.find((option: any) => option.id === defaultOption.id)
+    )
+    const [isStake, setIsStake] = useState<boolean>(false)
     return (
         <Box padding="30px 19px 0">
             <Flex align="center">
@@ -24,10 +30,10 @@ export default function PackageItem({ item }: any) {
                         width="fit-content"
                     >
                         <Box fontWeight="700" fontSize="20px">
-                            {/* {selectOption.rateDisplay}% */}
+                            {selectOption.rateDisplay}%
                         </Box>
 
-                        {/* {selectOption.gift && ( */}
+                        {selectOption.gift && (
                             <>
                                 <AddIcon color="#fba346" margin="0 10px" height="12px" />
                                 <Box
@@ -36,15 +42,15 @@ export default function PackageItem({ item }: any) {
                                     textTransform="uppercase"
                                     fontWeight="600"
                                 >
-                                    {/* {selectOption.gift} */}
+                                    {selectOption.gift}
                                 </Box>
                             </>
-                        {/* )} */}
+                          )} 
                     </Flex>
                 </Box>
                 <Box p="0 10px" flex="4">
                     <Flex alignItems="center">
-                        {/* {item.options.map((option: any) => { */}
+                        {item.options.map((option: any) => {
                             return (
                                 <Box
                                     padding="7px 22px"
@@ -54,28 +60,28 @@ export default function PackageItem({ item }: any) {
                                     textTransform="uppercase"
                                     fontSize="18px"
                                     cursor="pointer"
-                                    // color={option.id === selectOption.id ? '#ffab00' : '#ffffff'}
-                                    // border={
-                                    //     option.id === selectOption.id
-                                    //         ? 'solid 0.6px rgba(3, 170, 20, 0.44)'
-                                    //         : '1px solid rgba(0, 174, 214, 0.33)'
-                                    // }
-                                    // bg={
-                                    //     option.id === selectOption.id
-                                    //         ? 'linear-gradient(rgba(255, 171, 0, 0.12), rgba(0, 174, 214, 0.17))'
-                                    //         : 'none'
-                                    // }
-                                    // fontWeight={option.id === selectOption.id ? '700' : '400'}
-                                    // key={option.id}
+                                    color={option.id === selectOption.id ? '#ffab00' : '#ffffff'}
+                                    border={
+                                        option.id === selectOption.id
+                                            ? 'solid 0.6px rgba(3, 170, 20, 0.44)'
+                                            : '1px solid rgba(0, 174, 214, 0.33)'
+                                    }
+                                    bg={
+                                        option.id === selectOption.id
+                                            ? 'linear-gradient(rgba(255, 171, 0, 0.12), rgba(0, 174, 214, 0.17))'
+                                            : 'none'
+                                    }
+                                    fontWeight={option.id === selectOption.id ? '700' : '400'}
+                                    key={option.id}
                                     // onClick={() => handleSelectOption(option.id)}
                                 >
-                                    {/* {option.duration} */}
+                                    {option.duration}
                                     <Box fontWeight="700" fontSize="10px" mt="-5px">
                                         Days
                                     </Box>
                                 </Box>
                             )
-                        {/* })} */}
+                         })} 
                     </Flex>
                 </Box>
                 <Flex p="0 10px" flex="1" justifyContent="center">
@@ -119,9 +125,9 @@ export default function PackageItem({ item }: any) {
                     // onClick={handleStake}
                 >
                     <Box>
-                        {/* {isStake ? ( */}
+                        {isStake ? (
                             <ChevronDownIcon w="30px" h="30px" />
-                      /  ) : (
+                        ) : (
                             <>
                                 <Button
                                     fontSize="15px"
@@ -139,14 +145,14 @@ export default function PackageItem({ item }: any) {
 
                                 <ChevronRightIcon w="30px" h="30px" />
                             </>
-                        {/* )} */}
+                        )}
                     </Box>
                 </Flex>
             </Flex>
 
-            {/* {isStake && 
-            <StakeDetail packageItem={item} option={selectOption} />
-            } */}
+            {/* {isStake && */}
+            {/* <StakeDetail packageItem={item} option={selectOption} /> */}
+                    {/*  } */}
         </Box>
     )
 }

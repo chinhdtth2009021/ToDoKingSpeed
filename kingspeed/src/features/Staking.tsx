@@ -4,6 +4,7 @@ import styled from '@emotion/styled'
 import { InfoOutlineIcon } from '@chakra-ui/icons'
 import PackageData from '../__mocks__/PackageData'
 import PackageItem from './PackageItem'
+
 export default function Staking() {
     const HeadingItem = styled(Box)`
         padding: 0 10px;
@@ -29,9 +30,8 @@ export default function Staking() {
                 <HeadingItem flex="2"></HeadingItem>
             </Flex>
             {PackageData.map((item) => {
-                return 
-                <PackageItem key={item.id} item={item} />
-             })}
+                return <PackageItem key={item.id} item={item} />
+            })}
         </Box>
     )
 }

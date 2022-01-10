@@ -24,7 +24,102 @@ const URL_BUY_KSC =
     'https://pancakeswap.finance/swap?outputCurrency=0x3ac0f8cecc1fb0ee6c2017a072d52e85b00c6694'
 
 export default function StakeDetail({ option, packageItem }: any) {
+    // const { balanceKSC, totalStakedAmount, web3, walletAddress, isLoading } =
+    // useAppSelector(selectAccount)
 
+    // const getDetailStakedPool = async () => {
+    //     const stakingContract = new web3.eth.Contract(
+    //         StakingContract.abi as AbiItem[],
+    //         process.env.REACT_APP_STAKING_CONTRACT
+    //     )
+    //     await stakingContract.methods.getDetailStakedPool().call((err: any, res: any) => {
+    //         if (err) {
+    //             console.log(err)
+    //             return
+    //         }
+    //         const adjacencyMatrix = res
+
+    //         if (option.id === OPTION_7_DAYS) {
+    //             const option7Days = adjacencyMatrix[0]
+
+    //             if (packageItem.id === PACKAGE_SILVER) {
+    //                 setTotalStakedByOption(formatDataStaked(option7Days[0]))
+    //             }
+
+    //             if (packageItem.id === PACKAGE_GOLD) {
+    //                 setTotalStakedByOption(formatDataStaked(option7Days[1]))
+    //             }
+
+    //             if (packageItem.id === PACKAGE_RUBY) {
+    //                 setTotalStakedByOption(formatDataStaked(option7Days[2]))
+    //             }
+
+    //             if (packageItem.id === PACKAGE_DIAMOND) {
+    //                 setTotalStakedByOption(formatDataStaked(option7Days[3]))
+    //             }
+    //         }
+
+    //         if (option.id === OPTION_30_DAYS) {
+    //             const option30Days = adjacencyMatrix[1]
+
+    //             if (packageItem.id === PACKAGE_SILVER) {
+    //                 setTotalStakedByOption(formatDataStaked(option30Days[0]))
+    //             }
+
+    //             if (packageItem.id === PACKAGE_GOLD) {
+    //                 setTotalStakedByOption(formatDataStaked(option30Days[1]))
+    //             }
+
+    //             if (packageItem.id === PACKAGE_RUBY) {
+    //                 setTotalStakedByOption(formatDataStaked(option30Days[2]))
+    //             }
+
+    //             if (packageItem.id === PACKAGE_DIAMOND) {
+    //                 setTotalStakedByOption(formatDataStaked(option30Days[3]))
+    //             }
+    //         }
+
+    //         if (option.id === OPTION_90_DAYS) {
+    //             const option90Days = adjacencyMatrix[2]
+
+    //             if (packageItem.id === PACKAGE_SILVER) {
+    //                 setTotalStakedByOption(formatDataStaked(option90Days[0]))
+    //             }
+
+    //             if (packageItem.id === PACKAGE_GOLD) {
+    //                 setTotalStakedByOption(formatDataStaked(option90Days[1]))
+    //             }
+
+    //             if (packageItem.id === PACKAGE_RUBY) {
+    //                 setTotalStakedByOption(formatDataStaked(option90Days[2]))
+    //             }
+
+    //             if (packageItem.id === PACKAGE_DIAMOND) {
+    //                 setTotalStakedByOption(formatDataStaked(option90Days[3]))
+    //             }
+    //         }
+
+    //         if (option.id === OPTION_180_DAYS) {
+    //             const option180Days = adjacencyMatrix[3]
+
+    //             if (packageItem.id === PACKAGE_SILVER) {
+    //                 setTotalStakedByOption(formatDataStaked(option180Days[0]))
+    //             }
+
+    //             if (packageItem.id === PACKAGE_GOLD) {
+    //                 setTotalStakedByOption(formatDataStaked(option180Days[1]))
+    //             }
+
+    //             if (packageItem.id === PACKAGE_RUBY) {
+    //                 setTotalStakedByOption(formatDataStaked(option180Days[2]))
+    //             }
+
+    //             if (packageItem.id === PACKAGE_DIAMOND) {
+    //                 setTotalStakedByOption(formatDataStaked(option180Days[3]))
+    //             }
+    //         }
+    //     })
+    // }
 
     return (
         <Box padding="20px 0" maxW="670px" margin="0 auto">

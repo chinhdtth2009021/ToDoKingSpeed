@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Table, Tr, Th, Tbody, TableCaption } from '@chakra-ui/react'
 import styled from '@emotion/styled'
+import NoData from "../components/NoData";
 export default function MyLockedStaking() {
-   
+    const [stakes, setStakes] = useState([])
     const THItem = styled(Th)`
         padding: 10px;
         font-size: 12px;
@@ -13,7 +14,7 @@ export default function MyLockedStaking() {
         margin-left: 20px;
         color: #8d9fb9;
     `
-    
+
     return (
         <Table>
             <Tr bgColor="#011921" p="10px 100px" borderRadius="3px">
@@ -28,17 +29,18 @@ export default function MyLockedStaking() {
                 <THItem></THItem>
             </Tr>
 
-            {/* {stakes.length > 0 ? (
+            {stakes.length > 0 ? (
                 <Tbody>
                     {stakes.map((stake, index) => {
-                        return <MyLockedItem key={index} stake={stake} updateStaked={updateStaked} />
+                        return
+                        // <MyLockedItem key={index} stake={stake} updateStaked={updateStaked} />
                     })}
                 </Tbody>
             ) : (
                 <TableCaption>
                     <NoData />
                 </TableCaption>
-            )} */}
+            )}
         </Table>
     )
 }

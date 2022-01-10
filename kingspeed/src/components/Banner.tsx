@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from '@emotion/styled'
 import { Box, HStack, Text } from '@chakra-ui/react'
 
+
+
 export default function Banner() {
+    const [kscPrice, setKscPrice] = useState(0)
     const Title = styled(Text)`
         font-size: 16px;
         font-weight: 600;
@@ -31,19 +34,22 @@ export default function Banner() {
                                 <Box>
                                     <Title>Total Staked</Title>
                                     <Value color="#ffab00">
-                                        {/* {numberFormat(totalStakedAmount)}   KSC*/}KSC
+                                           {/* {numberFormat(totalStakedAmount)}   ksc */}
+                                        KSC
                                        </Value>
                                 </Box>
                             <Box>
                                 <Title>Total Value Locked</Title>
                                 <Value color="#00aed6">
-                                    {/* $ {numberFormat(totalStakedAmount * kscPrice)} */}KSC
+                                     {/* $ {numberFormat(totalStakedAmount * kscPrice)} */}
+                                     KSC
+                                   
                                 </Value>
                             </Box>
                             <Box>
                                 <Title>Price KSC</Title>
                                 <Value color="#c3fb12">
-                                    {/* ${kscPrice} */}KSC
+                                    ${kscPrice}
                                     </Value>
                             </Box>
                         </HStack>

@@ -34,23 +34,6 @@ export default function ButtonConnectWallet() {
     `
 
     const handleConnectWallet = async () => {
-        // connectWeb3Modal()
-        // try {
-        //     if (window.ethereum) {
-        //         const provider = new ethers.providers.Web3Provider(window.ethereum)
-
-        //         // connect to metamask
-        //         const accounts: string[] = await window.ethereum.request({
-        //             method: 'eth_requestAccounts',
-        //         })
-
-        //         dispatch(setWalletAddress(accounts[0]))
-        //     } else if (!window.ethereum) {
-        //         notification('Please install MetaMask browser extension to interact', 'warning')
-        //     }
-        // } catch (error) {
-        //     console.log(error)
-        // }
     }
 
     return (
